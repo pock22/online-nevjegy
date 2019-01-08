@@ -1,0 +1,72 @@
+/* CSS reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(assets/central-park.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.profile-card {
+  width: 500px;
+  max-width: calc(100vw - 10px);
+  background-color: hsla(0, 0%, 100%, .5);
+  border-radius: 4px;
+  box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
+}
+.name-headline, .about, .section-links {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 5% 10%;
+  color: #003300;
+}
+.about, .section-links {
+  border-top: 1px solid hsla(0, 0%, 30%, .8);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+i {
+  color: #003300;
+}
+#cf {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+#cf {
+  height: 100px;
+  width: 100px;
+}
