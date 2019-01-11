@@ -4,36 +4,95 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 100%;
 }
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   background: url(assets/central-park.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 .profile-card {
-  width: 500px;
-  max-width: calc(100vw - 10px);
-  background-color: hsla(0, 0%, 100%, .5);
-  border-radius: 4px;
-  box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
-  position:relative;
-}
-.name-headline, .about, .section-links {
-  text-align: center;
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 100px;
-  padding: 5% 10%;
-  color: #003300;
-}
-.about, .section-links {
-  border-top: 1px solid hsla(0, 0%, 30%, .8);
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
+.favourite-links, .name-headline, .about, .section-links {
+  position: absolute;
+  box-sizing: border-box;
+  height: 49%;
+  width: 300px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #e6e6e6;
+  text-align: center;
+  color: #004d00;
+  opacity: 0.8;
+  box-shadow: 5px 5px 5px #1a1a1a;
+  
+  
+}
+
+.favourite-links {
+  right: 0;
+  bottom: 0;
+}
+
+.name-headline {
+  left: 0;
+  top: 0;
+}
+
+.about {
+  right: 0;
+  top: 0;
+}
+
+.section-links {
+  left: 0;
+  bottom: 0;
+}
+#cf {
+  position:relative;
+  height: 400px;
+  width: 400px;
+  margin: auto;
+}
+
+#cf img {
+  position:absolute;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  height: 400px;
+  width: 400px;
+}
+#cf {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  box-shadow: 10px 10px 5px #1a1a1a;
+          
+}
+#cf img.top:hover {
+  opacity:0;
+}
+
+a {
+  color: #004d00;
+}
+
+heading {
+  margin: auto;
+}
+.center {
+  margin-top: 50%;
+  line-height: 2;
+}
 ul {
   list-style-type: none;
 }
@@ -41,35 +100,3 @@ ul {
 li {
   display: inline;
 }
-i {
-  color: #003300;
-}
-#cf {
-  position:relative;
-  height:281px;
-  width:450px;
-  margin:0 auto;
-}
-
-#cf img {
-  position:absolute;
-  left:0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-}
-
-#cf img.top:hover {
-  opacity:0;
-}
-img {
-  height: 100px;
-  width: 100px;
-}
-#cf {
-  height: 100px;
-  width: 100px;
-  opacity: 0.7;
-}
-
