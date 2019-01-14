@@ -1,27 +1,23 @@
-/* CSS reset */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
   display: flex;
   height: 100vh;
+  width: 100vw;
   background: url(assets/central-park.jpg) no-repeat center center fixed;
   background-size: cover;
+  position: relative;
+  box-sizing: border-box;
 }
 .profile-card {
   height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 
 .favourite-links, .name-headline, .about, .section-links {
   position: absolute;
-  box-sizing: border-box;
   height: 49%;
-  width: 300px;
+  width: 20%;
   margin: 5px;
   border-radius: 5px;
   background-color: #e6e6e6;
@@ -52,12 +48,6 @@ body {
   left: 0;
   bottom: 0;
 }
-#cf {
-  position:relative;
-  height: 400px;
-  width: 400px;
-  margin: auto;
-}
 
 #cf img {
   position:absolute;
@@ -65,10 +55,15 @@ body {
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
-  height: 400px;
-  width: 400px;
+}
+img {
+  height: 100%;
+  width: 100%;
 }
 #cf {
+  height: 37.03%;
+  width: 20.83%;
+  margin: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -92,6 +87,8 @@ heading {
 .center {
   margin-top: 50%;
   line-height: 2;
+  height: 80%;
+  width: 100%;
 }
 ul {
   list-style-type: none;
