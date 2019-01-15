@@ -1,94 +1,94 @@
+/* ==== A SIMPLE CSS RESET FROM ERIC MEYER ==== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Basics */
 
 body {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
   background: url(assets/central-park.jpg) no-repeat center center fixed;
   background-size: cover;
-  position: relative;
-  box-sizing: border-box;
-}
-.profile-card {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  line-height: 3;
 }
 
-.favourite-links, .name-headline, .about, .section-links {
-  position: absolute;
-  height: 49%;
-  width: 20%;
-  margin: 5px;
-  border-radius: 5px;
-  background-color: #e6e6e6;
+.main {
+  height: 75%;
+  margin-top: 266.8px;
+  width: 750px;
+  border-radius: 10px;
+  background-color: #cccccc;
+  opacity: 0.8;
+  color: #003300;
+  
+}
+
+.about, .favourite-links, .section-links, .profile-image {
+  width: 95%;
+  height: 265px;
   text-align: center;
-  color: #004d00;
-  opacity: 0.8;
-  box-shadow: 5px 5px 5px #1a1a1a;
-  
+  margin: 10px auto;
+  border-radius: 5px;
   
 }
 
-.favourite-links {
-  right: 0;
-  bottom: 0;
-}
-
-.name-headline {
-  left: 0;
-  top: 0;
-}
-
-.about {
-  right: 0;
-  top: 0;
-}
-
-.section-links {
-  left: 0;
-  bottom: 0;
-}
-
-#cf img {
-  position:absolute;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-}
 img {
-  height: 100%;
-  width: 100%;
+  width: 266px;
+  height: 265px;
 }
-#cf {
-  height: 37.03%;
-  width: 20.83%;
-  margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.8;
-  box-shadow: 10px 10px 5px #1a1a1a;
-          
-}
-#cf img.top:hover {
-  opacity:0;
-}
-
-a {
-  color: #004d00;
-}
-
-heading {
-  margin: auto;
-}
-.center {
-  margin-top: 50%;
-  line-height: 2;
-  height: 80%;
-  width: 100%;
+.heading {
+  position: fixed;
+  top: 0;
+  height: 266.8px;
+  text-align: center;
+  width: 650px;
+  background-color: #262626;
+  opacity: 0.9;
+  color: #bfbfbf;
+  z-index: 1;
 }
 ul {
   list-style-type: none;
@@ -96,4 +96,41 @@ ul {
 
 li {
   display: inline;
+}
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show more';
+}
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}
+a {
+  color: #003300;
+}
+.profile-image, .favourite-links, .section-links {
+  border-top: 1px solid #003300;
 }
